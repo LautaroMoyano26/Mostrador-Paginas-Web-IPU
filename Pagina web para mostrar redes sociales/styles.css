@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4dd0e1 0%, #00acc1 50%, #00838f 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 50px 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    font-size: 60px;
+    color: #00838f;
+    margin-bottom: 20px;
+    animation: rotate 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #00838f;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #00acc1;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 35px;
+    font-style: italic;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 18px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn i {
+    font-size: 28px;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.instagram {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.instagram:hover {
+    background: linear-gradient(135deg, #a44bc5, #ff2e2e, #fdc156);
+}
+
+.whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.whatsapp:hover {
+    background: linear-gradient(135deg, #2ee373, #159d8f);
+}
+
+.catalogo {
+    background: linear-gradient(135deg, #00acc1, #00838f);
+}
+
+.catalogo:hover {
+    background: linear-gradient(135deg, #00bcd4, #00959d);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 24px;
+    color: #00acc1;
+    opacity: 0.6;
+}
+
+.footer i {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.footer i:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.footer i:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 40px 25px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+    
+    .social-btn {
+        font-size: 18px;
+        padding: 15px 25px;
+    }
+    
+    .social-btn i {
+        font-size: 24px;
+    }
+}
